@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Trees in Aix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+  <style>
+    body {margin: 0; font-family: sans-serif; }
+    #chart {
+      position: relative;
+      width: 100vw; height: 100vh; overflow: hidden;
+    }
+    #app {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    #view-default-view {cursor: default;}
+    #legend-wrapper {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    }
+    .deck-tooltip h3 {
+      margin: 0 0 1rem 0;
+    }
+    .deck-tooltip ol{
+      margin: 0;
+      padding: 0 0 0 1rem;
+    }
+    #legend-title {
+      margin: 0 0 1rem 0;
+      font-weight: normal;
+    }
+  </style>
+  <script src="./legend.component.js"></script>
+  <script type="module" crossorigin src="/dev-site/aix2/assets/index-ffd50139.js"></script>
+</head>
+<body>
+  <div id="chart">
+    <div id="app"></div>
+    <div id="legend-wrapper">
+      <h4 id="legend-title">Tree height in meters</h4>
+      <custom-legend 
+        labels="<2;2-5;5-8;8-11;11-14;14-17;17-20;20-23;23-26;26-29;29-32;32-35;35-38;>38" 
+        colors="#f1f8e9;#dcedc8;#c5e1a5;#aed581;#9ccc65;#8bc34a;#7cb342;#689f38;#558b2f;#33691e;#ccff90;#b2ff59;#76ff03;#64dd17"/>  
+    </div>
+  </div>
+</body>
+
+</html>
