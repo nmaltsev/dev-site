@@ -1,0 +1,16 @@
+{
+    "type": "FeatureCollection",
+    "name": "height_aix",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+    { "type": "Feature", "properties": { "height": 13.437346458435059, "winRadius": 3.656216220855713, "treeID": 1 }, "geometry": { "type": "Point", "coordinates": [ 5.4794249382438, 43.558908797928758 ] } },
+    { "type": "Feature", "properties": { "height": 8.7954254150390625, "winRadius": 2.6349935913085938, "treeID": 2 }, "geometry": { "type": "Point", "coordinates": [ 5.480220477086179, 43.558885671837317 ] } },
+    { "type": "Feature", "properties": { "height": 6.7197079658508301, "winRadius": 2.1783357524871829, "treeID": 3 }, "geometry": { "type": "Point", "coordinates": [ 5.481315058488499, 43.5588507531874 ] } },
+    { "type": "Feature", "properties": { "height": 13.450743675231934, "winRadius": 3.6591636085510251, "treeID": 4 }, "geometry": { "type": "Point", "coordinates": [ 5.478213451095554, 43.55891666067248 ] } },
+    { "type": "Feature", "properties": { "height": 17.603076934814453, "winRadius": 4.5726769256591799, "treeID": 5 }, "geometry": { "type": "Point", "coordinates": [ 5.479478280509547, 43.558882824438186 ] } },
+    { "type": "Feature", "properties": { "height": 16.030517578125, "winRadius": 4.2267138671874998, "treeID": 144501 }, "geometry": { "type": "Point", "coordinates": [ 5.458443875800918, 43.501708509662407 ] } },
+    { "type": "Feature", "properties": { "height": 10.885448455810547, "winRadius": 3.09479866027832, "treeID": 144502 }, "geometry": { "type": "Point", "coordinates": [ 5.462133335075361, 43.501624803756755 ] } },
+    { "type": "Feature", "properties": { "height": 14.652433395385742, "winRadius": 3.9235353469848628, "treeID": 144503 }, "geometry": { "type": "Point", "coordinates": [ 5.462208075391575, 43.501623106760277 ] } }
+    ]
+}
+        

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <style type="text/css">    
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .frame {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    #map {
+        flex: 1 1 auto;
+        height: 90vh;
+    }
+    
+    .zoom-panel {
+        flex: 0 0 auto;
+        height: 50px;
+    }
+    .zoom-panel > button {
+        padding: 0;
+        font-size: large;
+        font-weight: bold;
+        width: 50px;
+        background-color: #202020;
+        color: #fefefe;
+    }
+  </style>
+</head>
+<body class="application">
+    <div class="frame">
+        <div id="map"></div>
+        <div class="zoom-panel">
+            <button id="zoom-in-button">+</button>
+            <button id="zoom-out-button">-</button>
+        </div>
+    </div>
+  
+  <script>
+    const myToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiY2UyZDZkOC1kNzVhLTQzYzAtYmM4ZC1mZTUyNjE3YTgzNmQiLCJpZCI6MTgwMzA1LCJpYXQiOjE3MDA3NTIwMzd9.tpjeL7YlHvyned67Pa_bpr_iZEJqt8QQ8CqslH69zuI';
+    const defaultToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4YjY2NzUzZC01NTE0LTQ3YzAtYTIzNS1kNzNkODgzYjA5M2IiLCJpZCI6MTc0NDgsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NzIyNjUzMTR9.Crxj2nEFjaCS9qDD8GGPSCnYhzcnjdeLSEek6wzMFNA';
+
+    Cesium.Ion.defaultAccessToken = myToken;
+
+    const viewer = new Cesium.Viewer('map', {
+      terrain: Cesium.Terrain.fromWorldTerrain(),
+      animation : false,
+      baseLayerPicker : false,
+      timeline : false,
+      geocoder : false,
+      homeButton : false,
+      fullscreenButton : false,
+      sceneModePicker : false,
+    });
+    viewer.camera.defaultZoomAmount = 60;  
+
+    
+    
+    const initialPosition = Cesium.Cartesian3.fromDegrees(5.44802, 43.52749, 753);
+    const initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(0.0, -90.0, 0);
+    viewer.scene.camera.setView({
+        destination: initialPosition,
+        orientation: initialOrientation,
+        endTransform: Cesium.Matrix4.IDENTITY,
+    });
+    (async function() {
+        // Add Cesium OSM Buildings, a global 3D buildings layer.
+        const osmBuildingsTileset = await Cesium.createOsmBuildingsAsync();
+        viewer.scene.primitives.add(osmBuildingsTileset);
+    }())
+
+    if (1) {
+        const dataSource1 = new Cesium.GeoJsonDataSource();
+        const heightDataset = Cesium.GeoJsonDataSource.load('./test1.json', { 
+            clampToGround: true,
+            markerColor: Cesium.Color.DARKGREEN,
+         });
+        heightDataset.then(function(dataSource){
+            console.log('Dataset is ready');
+            console.dir(dataSource);
+
+            for (const entity of dataSource.entities.values) {
+                console.log('Entity')
+                
+                console.dir(entity.properties)
+                entity.billboard = undefined;
+                entity.point = new Cesium.PointGraphics({
+                    // distanceDisplayCondition: ,
+                    scaleByDistance: true,
+                    color: Cesium.Color.fromRandom(),
+                    pixelSize: 10
+                });  
+                console.dir(entity);  
+            }
+            viewer.dataSources.add(dataSource);
+            viewer.zoomTo(dataSource);
+
+        }).catch(function(error){
+            console.log('Error')
+            console.dir(error)
+
+        })
+    }
+    
+function zoomIn() { viewer.camera.zoomIn(); }
+function zoomOut() { viewer.camera.zoomOut(); }
+document.getElementById("zoom-in-button").addEventListener("click", zoomIn, false);
+document.getElementById("zoom-out-button").addEventListener("click", zoomOut, false);
+</script>
+</body>
+</html>
