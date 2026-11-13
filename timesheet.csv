@@ -1,9 +1,12 @@
 week,Day,Activities,,,,,,,,
-1,09/11/2026,"#SCOLive: debug the application, clarify the requirements
+1,2026-11-09,"#SCOLive: debug the application, clarify the requirements
 #Another: clarify the Biomass working hours
 ",,,,,,,,
-,10/11/2026,"#SCOLive: release v1.7.2
+,2026-11-10,"#SCOLive: release v1.7.2
 ",,,,,,,,
-,11/11/2026,Jour ferier,,,,,,,,
-,12/11/2026,"#SCOLive: deploy in prod
+,2026-11-11,#absent: Jour ferier,,,,,,,,
+,2026-11-12,"#SCOLive: deploy in prod
 ",,,,,,,,
+,2026-11-13,"#absent: 50% RTT
+#nothing: lack of tasks",,,,,,,,
+2,2026-11-16,,,,,,,,,
