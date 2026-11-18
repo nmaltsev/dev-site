@@ -9,7 +9,8 @@ week,Day,Activities,,,,,,,,
 ",,,,,,,,
 ,2026-11-13,"#absent: 50% RTT
 #nothing: lack of tasks",,,,,,,,
-2,2026-11-16,"#Biomass: working on docs site; investigating the issue
+2,2026-11-16,"#Biomass: working on docs site; investigating the archive downloading issue
 
 ",,,,,,,,
-,2026-11-17,,,,,,,,,
+,2026-11-17,#Biomass: test streaming files from persistent volumes,,,,,,,,
+,,,,,,,,,,
