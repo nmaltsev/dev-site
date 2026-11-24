@@ -16,4 +16,8 @@ week,Day,Activities,,,,,,,,
 ,2026-11-18,#Biomass: test streaming files from persistent volumes,,,,,,,,
 ,2026-11-20,#Biomass:  test streaming files from persistent volumes,,,,,,,,
 ,2026-11-20,#Biomass: Deployed the Biomas site. Investigate the concurent issues while downloading archives from the site,,,,,,,,
-3,2026-11-23,,,,,,,,,
+3,2026-11-23,"#SCOLive: debug the iphone apps; 
+#Biomass: debugging/investigating pipeline jobs",,,,,,,,
+,2026-11-24,"#Biomass:design the docs site redeployment workflow
+",,,,,,,,
+,2026-11-24,,,,,,,,,
