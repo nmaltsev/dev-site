@@ -4,7 +4,9 @@ week,Day,Activities,,Date,debs,,,,,
 ",,2026-11-24,"general: +111
 tech: -81",,,,,
 ,2026-11-10,"#SCOLive: release v1.7.2
-",,,,,,,,
+",,2026-11-27,"general: +128
+tech: -3
+",,,,,
 ,2026-11-11,#absent: Jour ferier,,,,,,,,
 ,2026-11-12,"#SCOLive: deploy in prod
 ",,,,,,,,
@@ -22,4 +24,8 @@ tech: -81",,,,,
 ,2026-11-24,"#Biomass:design the docs site redeployment workflow
 #Albavalor: update the site
 ",,,,,,,,
-,2026-11-25,,,,,,,,,
+,2026-11-25,#Biomass: examinating the Filemanager MS for file management ,,,,,,,,
+,2026-11-26,#Biomass: craft a file manager for archives,,,,,,,,
+,2026-11-27,#Biomass: testes and deployed the file manager,,,,,,,,
+4,2026-11-30,,,,,,,,,
+,2026-12-01,,,,,,,,,
