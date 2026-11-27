@@ -1,4 +1,4 @@
-week,Day,Activities,,Date,debs,,,,,
+week,Day,Activities,Total days,Date,debs,,,,,
 1,2026-11-09,"#SCOLive: debug the application, clarify the requirements
 #Another: clarify the Biomass working hours
 ",,2026-11-24,"general: +111
@@ -26,6 +26,6 @@ tech: -3
 ",,,,,,,,
 ,2026-11-25,#Biomass: examinating the Filemanager MS for file management ,,,,,,,,
 ,2026-11-26,#Biomass: craft a file manager for archives,,,,,,,,
-,2026-11-27,#Biomass: testes and deployed the file manager,,,,,,,,
+,2026-11-27,#Biomass: tested and deployed the file manager,"=range(B2,B16).length",,,,,,,
 4,2026-11-30,,,,,,,,,
 ,2026-12-01,,,,,,,,,
